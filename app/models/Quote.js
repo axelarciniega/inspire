@@ -9,7 +9,13 @@ export class Quote{
 
     get QuoteTemplate(){
         return `
-            <span class='text-light' title="${this.author}"><b>${this.quote}</b></span>
+        <section class='row justify-content-end'>
+        <div class="col-8">
+        <span class='text-light' title="${this.author}"><b>"${this.quote}"</b></span>
+        </section>
+        </div>
+        
+            
         `
     }
 

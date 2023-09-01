@@ -12,10 +12,11 @@ import { setHTML, setText } from "../utils/Writer.js";
     }
 
     function _drawWeather(){
+        console.log('drawing weather')
         let weather = AppState.weather
         let content = ''
-        weather.content += weatherTemplate
-        setHTML()
+        weather.content += weather.WeatherTemplate
+        setHTML('weathering', content)
     }
 
 
@@ -30,6 +31,7 @@ export class InspireController{
         this.getPicture()
         this.getWeather()
         AppState.on('activePicture', _drawPicture)
+        AppState.on('weather', _drawWeather)
     }
 
     async getPicture(){
@@ -43,7 +45,7 @@ export class InspireController{
 
     async getWeather(){
         try {
-            await inspireServices.getWeather
+            await inspireServices.getWeather()
         } catch (error) {
             Pop.error(error)
             console.error(error)

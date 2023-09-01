@@ -24,6 +24,7 @@ class InspireServices{
     async getWeather(){
         const res = await api.get('/api/weather')
         console.log(res.data)
+        AppState.weather = new Inspire(res.data)
     }
 
 

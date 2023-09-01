@@ -1,12 +1,22 @@
+import { AppState } from "../AppState.js"
+import { Todo } from "../models/Todo.js"
 
 
 
 
-class SandboxInspireController{
+class SandboxInspireService{
+   
+
+    async createTodo(){
+        console.log('creating')
+    }
+
+   
+
 
 }
 
 
 
 
-export const sandboxInspireController = new SandboxInspireController()
+export const sandboxInspireService = new SandboxInspireService()

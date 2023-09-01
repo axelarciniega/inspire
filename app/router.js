@@ -1,5 +1,6 @@
 import { AboutController } from "./controllers/AboutController.js";
 import { HomeController } from "./controllers/HomeController.js";
+import { SandboxInspireController } from "./controllers/SandboxInspireController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
 import { InspireController } from "./controllers/inspireController.js";
 import { AboutView } from "./views/AboutView.js";
@@ -11,11 +12,9 @@ import { AboutView } from "./views/AboutView.js";
 export const router = [
   {
     path: '',
-    controller: InspireController,
+    controller: [InspireController, SandboxInspireController],
     view: /*html*/`
-    <div class="card">
-    
-    </div>
+
     `
   },
   {

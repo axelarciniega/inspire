@@ -100,20 +100,34 @@
      <!-- STUB TODO form -->
 
      <section class="row">
+      <Span class="text-light">remaining</Span>
       <p>
-  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTodoForm" aria-expanded="false" aria-controls="collapseTodoForm">
     TODOS
   </button>
 </p>
 <div style="min-height: 120px;">
-  <div class="collapse collapse-horizontal" id="collapseWidthExample">
+  <div class="collapse collapse-horizontal" id="collapseTodoForm">
     <div class="card card-body" style="width: 300px;">
       <section class="row">
-        <div><button class="rounded">Creating TODO</button></div>
-        <div><input type="checkbox">Creating clock<i class="mdi mdi-trash-can selectable"></i></div>
-        <div><input type="checkbox">Creating sum<i class="mdi mdi-trash-can selectable"></i></div>
-        <div><input type="checkbox">Making Food <i class="mdi mdi-trash-can selectable"></i></div>
-        <div><input type="checkbox">Making Sum <i class="mdi mdi-trash-can selectable"></i></div>
+        <form action="">
+
+          <div><button type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm" class="btn btn-dark text-light rounded ">Creating TODO</button></div>
+
+          <div class="mb-3">
+  
+  <input type="text" class="form-control collapse" id="collapseForm" placeholder="TODO">
+  <button>Submit</button>
+</div>
+</form>
+
+
+
+          <div><input type="checkbox">Creating clock<i class="mdi mdi-trash-can selectable"></i></div>
+          <div><input type="checkbox">Creating sum<i class="mdi mdi-trash-can selectable"></i></div>
+          <div><input type="checkbox">Making Food <i class="mdi mdi-trash-can selectable"></i></div>
+          <div><input type="checkbox">Making Sum <i class="mdi mdi-trash-can selectable"></i></div>
+
       </section>
     </div>
   </div>

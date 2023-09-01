@@ -12,11 +12,19 @@ import { setHTML, setText } from "../utils/Writer.js";
     }
 
     function _drawWeather(){
-        console.log('drawing weather')
+        console.log('drawing the weather')
         let weather = AppState.weather
         let content = ''
-        weather.content += weather.WeatherTemplate
+        content += weather.WeatherTemplate
         setHTML('weathering', content)
+    }
+
+    function _drawQuote(){
+        console.log('drawing the quote')
+        let quote = AppState.quotes
+        let content = ''
+        content += quote.QuoteTemplate
+        setHTML('active-picture', content)
     }
 
 
@@ -30,8 +38,10 @@ export class InspireController{
         console.log('Hello from the controller')
         this.getPicture()
         this.getWeather()
+        this.getQuote()
         AppState.on('activePicture', _drawPicture)
         AppState.on('weather', _drawWeather)
+        AppState.on('quotes', _drawQuote)
     }
 
     async getPicture(){
@@ -46,6 +56,16 @@ export class InspireController{
     async getWeather(){
         try {
             await inspireServices.getWeather()
+        } catch (error) {
+            Pop.error(error)
+            console.error(error)
+        }
+    }
+
+
+    async getQuote(){
+        try {
+            await inspireServices.getQuote()
         } catch (error) {
             Pop.error(error)
             console.error(error)

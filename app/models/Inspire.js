@@ -13,27 +13,9 @@ export class Inspire{
 
     }
 
-        get ActiveTemplate(){
-            return `
-                <div class="col-8 text-light">
-            <div>
-              <h1>${this.date}</h1>
-            </div>
-            <div>quote</div>
-          </div>
-            `
-        }
 
 
-        get WeatherTemplate(){
-            return `
-        <div class="col-4" >
-            <h3> Weather ${this.weather}</h3>
-            <h5> temp${this.temp}</h5>
-        </div>
-            
-            `
-        }
+        
 
 
 

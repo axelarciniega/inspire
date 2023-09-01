@@ -12,6 +12,8 @@ class ObservableAppState extends EventEmitter {
   activePicture = null
   
   weather = null
+
+  quotes = null
   
   page = ''
   user = null

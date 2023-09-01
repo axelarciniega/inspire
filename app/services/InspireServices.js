@@ -1,5 +1,7 @@
 import { AppState } from "../AppState.js"
+import { Quote } from "../models/Quote.js"
 import { Inspire } from "../models/inspire.js"
+import { Weather } from "../models/weather.js"
 
 
 
@@ -23,8 +25,14 @@ class InspireServices{
 
     async getWeather(){
         const res = await api.get('/api/weather')
-        console.log(res.data)
-        AppState.weather = new Inspire(res.data)
+        AppState.weather = new Weather(res.data)
+        console.log(AppState.weather)
+    }
+
+    async getQuote(){
+        const res = await api.get('/api/quotes')
+        AppState.quotes = new Quote(res.data)
+        console.log(AppState.quotes)
     }
 
 

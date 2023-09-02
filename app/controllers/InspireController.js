@@ -29,12 +29,27 @@ import { setHTML, setText } from "../utils/Writer.js";
 
 
 
+    function _updatedTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            
+            const timeString = `${hours}:${minutes}`;
 
+            document.getElementById('clock').textContent = timeString;
+        }
 
+        // Update the clock every second
+        
+        
+        
+        
+        
+        
 
-
-export class InspireController{
-    constructor(){
+        
+        export class InspireController{
+            constructor(){
         console.log('Hello from the controller')
         this.getPicture()
         this.getWeather()
@@ -52,7 +67,7 @@ export class InspireController{
             console.error(error)
         }
     }
-
+    
     async getWeather(){
         try {
             await inspireServices.getWeather()
@@ -61,8 +76,8 @@ export class InspireController{
             console.error(error)
         }
     }
-
-
+    
+    
     async getQuote(){
         try {
             await inspireServices.getQuote()
@@ -71,6 +86,8 @@ export class InspireController{
             console.error(error)
         }
     }
-
-
+    
+    
 }
+setInterval(_updatedTime, 1000);
+_updatedTime();

@@ -15,6 +15,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+ 
+
     <link rel="stylesheet" href="assets/style/main.css" />
     <link rel="stylesheet" href="assets/style/style.css" />
     <title>inspire</title>
@@ -114,11 +117,13 @@
 
           <div><button type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm" class="btn btn-dark text-light rounded ">Creating TODO</button></div>
 
-          <div class="mb-3">
-  
-  <input type="text" class="form-control collapse" id="collapseForm" placeholder="TODO">
-  <button>Submit</button>
-</div>
+         
+  <div class="form-control collapse" id="collapseForm" >
+
+    <input type="text"  placeholder="TODO">
+    <button>Submit</button>
+  </div>
+
 </form>
 
 
@@ -157,6 +162,11 @@
         </div>
         
     </footer>
+
+<!-- Clock is here for now -->
+     <div id="clock"></div>
+
+   
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>

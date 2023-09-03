@@ -51,6 +51,7 @@ import { setHTML, setText } from "../utils/Writer.js";
         export class InspireController{
             constructor(){
         console.log('Hello from the controller')
+    
         this.getPicture()
         this.getWeather()
         this.getQuote()
@@ -58,6 +59,9 @@ import { setHTML, setText } from "../utils/Writer.js";
         AppState.on('weather', _drawWeather)
         AppState.on('quotes', _drawQuote)
     }
+
+   
+
 
     async getPicture(){
         try {

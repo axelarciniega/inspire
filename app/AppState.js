@@ -10,7 +10,16 @@ import { loadState } from './utils/Store.js'
 class ObservableAppState extends EventEmitter {
   
   /**@type {Todo[]} */
-  myTodoList = []
+  myTodoList = [
+    new Todo({
+      description: 'creating clock'
+    }),
+
+    new Todo({
+      description: 'making food'
+    })
+
+  ]
 
 
   activePicture = null

@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js"
 import { Quote } from "../models/Quote.js"
+import { Todo } from "../models/Todo.js"
 import { Inspire } from "../models/inspire.js"
 import { Weather } from "../models/weather.js"
 
@@ -16,7 +17,11 @@ const api = axios.create({
 
 class InspireServices{
 
+
+    
+
     async getPicture(){
+        
         const res = await api.get('/api/images')
         console.log(res.data)
         AppState.activePicture = new Inspire(res.data)

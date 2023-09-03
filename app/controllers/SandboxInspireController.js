@@ -8,7 +8,7 @@ import { setHTML } from "../utils/Writer.js";
         let todo = AppState.myTodoList
         let content = ''
         todo.forEach(t => content += t.TodoTemplate )
-        setHTML('todo', content)
+        // setHTML('todo', content)
     }
 
 
@@ -16,7 +16,7 @@ export class SandboxInspireController{
     constructor(){
         this.getTodo()
         this.saveTodo()
-        AppState.on('myTodoList', _drawTodo)
+        _drawTodo()
     }
 
 

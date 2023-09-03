@@ -13,9 +13,7 @@ export class Todo{
 
     TodoTemplate(){
         return `
-        <div><input type="checkbox">${this.description}<i class="mdi mdi-trash-can selectable"></i></div>
-        
-        
+        <div><input type="checkbox"><i class="mdi mdi-trash-can selectable"></i></div>
         `
 
 

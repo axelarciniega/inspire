@@ -15,7 +15,7 @@ export const router = [
     controller: [InspireController, SandboxInspireController],
     view: /*html*/`
     <section class="row">
-      <Span class="text-light">remaining</Span>
+      <Span id="remain" class="text-light">remaining</Span>
       <p>
   <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTodoForm" aria-expanded="false" aria-controls="collapseTodoForm">
     TODOS

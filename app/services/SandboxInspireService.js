@@ -40,6 +40,26 @@ class SandboxInspireService{
         console.log(data)
     }
 
+
+    async deleteTodo(todoId){
+      const res = await api.delete(`api/todos/${todoId}`)
+      console.log('deleting')
+
+      const filteredArr = AppState.myTodoList.filter(t => t.id != todoId)
+      AppState.myTodoList = filteredArr
+
+    }
+
+    async completeTodo(todoId){
+      const todo = AppState.myTodoList.find(todo => todo.id == todoId )
+      todo.completed = !todo.completed
+
+      const res = await api.put(`api/todos/${todoId}`, todo)
+      console.log('completed', res.data);
+      AppState.emit('myTodoList')
+    }
+
+    
    
 
 

@@ -14,7 +14,7 @@ export const router = [
     path: '',
     controller: [InspireController, SandboxInspireController],
     view: /*html*/`
-    <section class="row" id="todo-temp">
+    <section class="row">
       <Span class="text-light">remaining</Span>
       <p>
   <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTodoForm" aria-expanded="false" aria-controls="collapseTodoForm">
@@ -25,26 +25,25 @@ export const router = [
   <div class="collapse collapse-horizontal" id="collapseTodoForm">
     <div class="card card-body" style="width: 300px;">
       <section class="row">
-        <form action="">
+        <form onsubmit="app.SandboxInspireController.createTodo()" action="">
 
           <div><button type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm" class="btn btn-dark text-light rounded ">Creating TODO</button></div>
 
          
   <div class="form-control collapse" id="collapseForm" >
 
-    <input type="text"  placeholder="TODO">
+    <input id="todo-description" name="description" id="todo" type="text"  placeholder="TODO">
     <button>Submit</button>
   </div>
 
-</form>
-
-
-    <div id="todo">
-     <div><input type="checkbox">Creating clock<i class="mdi mdi-trash-can selectable"></i></div>
-          <div><input type="checkbox">Creating sum<i class="mdi mdi-trash-can selectable"></i></div>
-          <div><input type="checkbox">Making Food <i class="mdi mdi-trash-can selectable"></i></div>
-          <div><input type="checkbox">Making Sum <i class="mdi mdi-trash-can selectable"></i></div>
-    </div>
+  
+  
+  <div id="todo-temp">
+  <div><input type="checkbox">Creating clock<i class="mdi mdi-trash-can selectable"></i></div>
+  
+  
+  </div>
+  </form>
          
 
       </section>

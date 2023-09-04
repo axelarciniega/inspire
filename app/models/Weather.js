@@ -16,4 +16,8 @@ export class Weather{
             
             `
         }
-}
+        
+        static kelvinSwitch(){
+            
+        }
+    }

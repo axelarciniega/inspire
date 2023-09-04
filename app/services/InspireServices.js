@@ -23,7 +23,7 @@ class InspireServices{
     async getPicture(){
         
         const res = await api.get('/api/images')
-        console.log(res.data)
+        // console.log(res.data)
         AppState.activePicture = new Inspire(res.data)
     }
 
@@ -31,13 +31,13 @@ class InspireServices{
     async getWeather(){
         const res = await api.get('/api/weather')
         AppState.weather = new Weather(res.data)
-        console.log(AppState.weather)
+        // console.log(AppState.weather)
     }
 
     async getQuote(){
         const res = await api.get('/api/quotes')
         AppState.quotes = new Quote(res.data)
-        console.log(AppState.quotes)
+        // console.log(AppState.quotes)
     }
 
 

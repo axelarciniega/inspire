@@ -3,7 +3,7 @@
 
 export class image{
     constructor(data){
-        this.imgUrl = data.imgUrl
+        this.imgUrl = data.largeImgUrl
         this.author = data.author
     }
 

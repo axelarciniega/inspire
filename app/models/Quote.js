@@ -11,7 +11,8 @@ export class Quote{
         return `
         <section class='row justify-content-end'>
         <div class="col-8">
-        <span class='text-light' title="${this.author}"><b>"${this.quote}"</b></span>
+        <span class='text-light'><b>"${this.quote}"</b></span>
+        <span class="on-hover">${this.author}</span>
         </section>
         </div>
         

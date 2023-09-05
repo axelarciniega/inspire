@@ -18,7 +18,11 @@ const api = axios.create({
 class InspireServices{
 
 
-    
+    toggleDisplay(){
+        AppState.isVisible = !AppState.isVisible
+        console.log(AppState.isVisible)
+        AppState.emit('isVisible')
+    }
 
     async getPicture(){
         

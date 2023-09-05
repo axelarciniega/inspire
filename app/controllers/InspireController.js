@@ -69,10 +69,12 @@ import { setHTML, setText } from "../utils/Writer.js";
         AppState.on('activePicture', _drawPicture)
         AppState.on('weather', _drawWeather)
         AppState.on('quotes', _drawQuote)
-    
+        AppState.on('isVisible', _drawWeather)
     }
 
-   
+   toggleDisplay(){
+    inspireServices.toggleDisplay()
+   }
 
 
     async getPicture(){

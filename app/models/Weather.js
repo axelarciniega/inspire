@@ -1,3 +1,4 @@
+import { AppState } from "../AppState.js"
 
 
 
@@ -11,7 +12,7 @@ export class Weather{
     get WeatherTemplate(){
             return `
         <div class="col-2 border" >
-            <h3 id="temp">${this.degree}</h3>
+            <h3  id="temp">${this.degree}</h3>
             <h5>${this.weather}</h5>
             <h5>${this.name}</h5>
         </div>
@@ -30,19 +31,22 @@ export class Weather{
             return fahren
         }
 
+
         get degree(){
+          if(AppState.isVisible == true){
             return `
-            <div class="selectable" onclick="app.SandboxInspireController.drawFahren()">${this.Celsius.toFixed(0)} C🌡️</div>
+            <div class="selectable" onclick="app.InspireController.toggleDisplay()">${this.Celsius.toFixed(0)} C🌡️</div>
             `
+
+          }if(AppState.isVisible == false){
+             return `
+            <div class="selectable" onclick="app.InspireController.toggleDisplay()">${this.Fahren.toFixed(0)} F🌡️</div>
+            `
+          }
         
         }
         
-        get Fahrendegree(){
-            return `
-            <div class=""selectable onclick="app.SandboxInspireController.drawCels()">${this.Fahren.toFixed(0)} F🌡️</div>
-            `
-        
-        }
+       
 
 
             

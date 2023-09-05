@@ -11,7 +11,7 @@ import { loadState } from './utils/Store.js'
 class ObservableAppState extends EventEmitter {
   
 
-
+isVisible = true
 
 
   /**@type {Todo[]} */

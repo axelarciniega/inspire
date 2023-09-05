@@ -14,7 +14,7 @@ export const router = [
     path: '',
     controller: [InspireController, SandboxInspireController],
     view: /*html*/`
-    <section class="row">
+    <section class="row container">
       <Span id="remain" class="text-light">remaining</Span>
       <p>
   <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTodoForm" aria-expanded="false" aria-controls="collapseTodoForm">
@@ -39,7 +39,7 @@ export const router = [
   
   
   <div id="todo-temp">
-  <div><input type="checkbox">Creating clock<i class="mdi mdi-trash-can selectable"></i></div>
+  /div>
   
   
   </div>
@@ -51,6 +51,8 @@ export const router = [
   </div>
 </div>
      </section>
+
+        
     `
   },
   {

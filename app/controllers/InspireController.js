@@ -31,13 +31,26 @@ import { setHTML, setText } from "../utils/Writer.js";
 
     function _updatedTime() {
             const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            
-            const timeString = `${hours}:${minutes}`;
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2,'0');
+            let ampm = 'am'
 
+            if (hours > 12) {
+                hours -= 12;
+                ampm = 'PM';
+            }
+
+            if (hours === 0) {
+                hours = 12;
+            }
+            
+            const timeString = `${hours}:${minutes} ${ampm}`;
+
+          
             document.getElementById('clock').textContent = timeString;
         }
+
+    
 
         
         
@@ -49,7 +62,7 @@ import { setHTML, setText } from "../utils/Writer.js";
         
         export class InspireController{
             constructor(){
-        console.log('Hello from the controller')
+        
         this.getPicture()
         this.getWeather()
         this.getQuote()

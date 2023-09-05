@@ -30,15 +30,7 @@ class SandboxInspireService{
 
 
 
-    async saveTodo(data){
-        const todo = AppState.myTodoList 
-        console.log('saving todos')
-        const res = await api.post('api/todos', todo)
-        console.log('saved todo', res.data)
-        AppState.myTodoList.push(new Todo(res.data))
-        AppState.emit('myTodoList')
-        console.log(data)
-    }
+   
 
 
     async deleteTodo(todoId){

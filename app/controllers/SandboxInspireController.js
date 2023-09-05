@@ -27,7 +27,7 @@ import { Todo } from "../models/Todo.js";
 export class SandboxInspireController{
     constructor(){
         AppState.on('account', this.getTodo)
-        // AppState.on('account', this.saveTodo)
+        
         AppState.on('account', _drawTodo)
        AppState.on('myTodoList' ,_drawTodo)
         
@@ -61,14 +61,7 @@ export class SandboxInspireController{
         }
     }
 
-    async saveTodo(){
-        try {
-            await sandboxInspireService.saveTodo()
-        } catch (error) {
-            Pop.error(error)
-            console.error(error)
-        }
-    }
+   
 
 
     async deleteTodo(todoId){
@@ -91,6 +84,14 @@ export class SandboxInspireController{
             Pop.error(error)
             console.error(error)
         }
+    }
+
+    drawFahren(){
+        setHTML('temp', AppState.weather.fahren)
+    }
+
+    drawCels(){
+        setHTML('temp',AppState.weather.Celsius)
     }
 
 
